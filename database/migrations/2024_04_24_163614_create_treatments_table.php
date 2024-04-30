@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('description');
             $table->text('notes')->nullable();
             $table->unsignedInteger('price')->nullable();
-            $table->foreignId('patients_id')->constrained('patients', 'id')->cascadeOnDelete();
+            $table->foreignId('patient_id')->constrained('patients', 'id')->cascadeOnDelete();
             $table->timestamps();
         });
     }
